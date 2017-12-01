@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+* {margin:0px;padding:0px}
+body{
+	background-color:white;
+
+	}
+div{
+		font-family:Verdana, Geneva, sans-serif;
+		
+		}
+
+
+ ul {
+	list-style-type:none;					
+    margin:0px;
+	padding:0px;
+	
+}
+
+
+
+	#banner span{
+				display:block;
+				text-align:center;
+				text-shadow: 5px 5px 5px gray;
+				letter-spacing:48px;
+				width:600px;
+				margin: auto;
+		}
+
+
+#container{
+	
+	position:relative;
+	width:800px;
+	margin:auto;
+	text-align:center;
+	left:50%;
+	margin-left:-400px;
+		
+}
+#banner {
+					background-color:#FFF;
+					color:#666;					
+					width:800px;
+					height:211px;
+					margin:auto;				
+					letter-spacing:10px;
+					font-size:36px;
+					
+				}
+
+
+#footer{
+						color:white;
+						background-color:#3db3e3;
+						text-align:center;
+						clear:both;
+						width:800px;
+						height:75px;
+						margin:15px auto;
+						line-height:75px;
+					}
+.text img{
+	
+	width: 400px;
+	
+	
+}
+	#content{
+		margin:auto auto;
+		width:800px;
+		background-color:#fff;
+		text-align:center;
+		margin:auto;
+		clear:both;
+	}
+
+
+
+	.text p{
+		text-align:left;
+		line-height:25px;
+		margin:0px 0px 15px 0px;
+		text-indent:35px;
+	}
+	.text{
+		width:600px;
+	
+		margin:auto;
+		padding-top:15px;
+		background-color:#f8f8f7;
+		font-size:12px;
+		color:#747679;
+		
+	}
+
+
+	  #detail{
+		margin:15px;
+	  }
+	  #detail p{
+		width:800px;
+		min-height:90px;
+		margin:15px auto 15px;
+		font-size:12px;
+		color:#747679;
+		padding:5px;
+	}
+	
+		.index-img-info{
+			padding:5px;
+			margin:5px;
+			font-size:12px;
+			color:#747679;
+		}
+
+
+	.nav a
+
+	{	
+		font-size:12px;
+		border-bottom:1px solid #ffffff;
+		background-color:#ced4dd;
+		border:1px solid yellow;
+		
+		color:white;
+		width:50px;
+		height:20px;
+		padding:5px;
+		margin-left:15px;
+		line-height:20px;
+	}
+	.nav ul{
+		padding:0px;
+		float:right;
+		clear:both;
+		padding-right:100px;
+	}
+	.nav li{
+		display:inline;
+	}
+	.nav {
+			height:30px;
+		width:700px;
+		text-align:center;
+		line-height:20px;
+		margin:auto;
+		border-bottom:1px dashed silver;
+		text-align:center;
+	}
+	
+	.nav ul li a:link, .nav ul li a:visited{
+		text-decoration:none;
+		color:#666;
+	}
+	#content p{
+		clear:both;
+		text-indent:30px;
+		padding:0px 25px 0px 25px	;
+	}
+	
+
