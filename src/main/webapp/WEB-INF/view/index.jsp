@@ -12,14 +12,14 @@
   <meta name="keywords" content="java,android,java web,小程序，微信公众平台，安卓,网站开,程序开发" />
 <meta name="description" content="一个程序开发人员的网站，个人介绍。个人程序相关信息。
 " />
-<link href="${ctx}/resource/02.css" rel="stylesheet" type="text/css" midia="screen" />
+<link href="${ctx}/resources/css/02.css" rel="stylesheet" type="text/css" midia="screen" />
 </head>
 
 <body>
 <div id="container">
 <div id="banner">
 	<!--<span>仙人掌网站制作</span>-->
-	<img src='${ctx}/resource/images/1916.jpg'/>
+	<img src='${ctx}/resources/images/1916.jpg'/>
 	</div>
 <!--<div class="nav">
 	<ul>
@@ -28,7 +28,7 @@
 	</ul>
 </div>-->
 <div id="content">
-<h1>${message}</h1>
+<h1>${message}:)</h1>
 <div class="text">
 		<p>
 编写好的程序程序是可以当作一项重要的人生目标。成为技术水平高的程序编写人要经过大量的学习实践。</p>
@@ -45,24 +45,24 @@
 		不过我还是很高兴的。
 		
 	</p>
-	<img src="${ctx}/resource/images/androidapppic.jpg" />
+	<img src="${ctx}/resources/images/androidapppic.jpg" />
 	<p>
 		我做的一个用来练手的购物网站。用的是java的ssh技术。
 		
 	</p>
-	<img src="${ctx}/resource/images/20170913153850.png" />
+	<img src="${ctx}/resources/images/20170913153850.png" />
 		<p>
 		我用brophp做的一个网站。
 		
 		
 	</p>
-	<img src="${ctx}/resource/images/20170913163404.png" />
+	<img src="${ctx}/resources/images/20170913163404.png" />
 	<p>
 		之后我有了一位客户。做了一个会员会费充值、添加消费记录、查看消费记录的一个安卓应用程序。做完之后又改为小程序版本。
 		
 		
 	</p>
-     <img src="${ctx}/resource/images/20170913163155.png" />
+     <img src="${ctx}/resources/images/20170913163155.png" />
 	
 </div>
 		<!--<ul style="float:left;background-color:#ffffff;display:inline;position:relative;padding-top:15px;"><li style="display:inline;float:left;width:200px;height:200px;"><img src="images/Screenshot_2015-01-08-14-49-51.png" height="100px"  /> 
