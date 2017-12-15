@@ -13,6 +13,9 @@
 <meta name="description" content="一个程序开发人员的网站，个人介绍。个人程序相关信息。
 " />
 <link href="${ctx}/resources/css/02.css" rel="stylesheet" type="text/css" midia="screen" />
+	<script type="text/javascript" src="${ctx}/resources/js/jquery-1.4.3.js"></script>
+	<link href="${ctx}/resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" midia="screen" />
+	<link href="${ctx}/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js" rel="stylesheet" type="text/css" midia="screen" />
 </head>
 
 <body>
@@ -72,7 +75,8 @@
 					<li style="display:inline;float:left;width:200px;height:200px;"><img src="images/Screenshot_2015-01-08-14-50-43.png" height="100px"  /> 
 					<br /><p class=index-img-info>看看您还喝不喝茶<a href="imgdetail4.html">&nbsp;&nbsp详细</a><br /></p></li>
 					<li style="display:inline;float:left;width:200px;height:200px;"><img src="images/Screenshot_2015-01-08-19-38-28.png" height="100px"  /> 
-					<br /><p class=index-img-info>此茶浓香耐泡型<a href="imgdetail5.html">&nbsp;&nbsp详细</a><br /></p></li></ul>	-->	
+					<br /><p class=index-img-info>此茶浓香耐泡型<a href="imgdetail5.html">&nbsp;&nbsp详细</a><br /></p></li></ul>	-->
+	<button type="button" class="btn btn-success">Info</button>
 </div>
 <div id="footer">1079597830@qq.com&nbsp;&nbsp;辽ICP备13010981号-2</div>
 </div>
