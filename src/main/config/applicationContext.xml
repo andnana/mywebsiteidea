@@ -15,7 +15,7 @@
         http://mybatis.org/schema/mybatis-spring
         http://mybatis.org/schema/mybatis-spring-1.2.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
          
-		<context:component-scan base-package="top.andnana" >
+		<context:component-scan base-package="top.andnana">
 			<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 		 </context:component-scan>
 		 <context:property-placeholder location="classpath:db.properties"/>

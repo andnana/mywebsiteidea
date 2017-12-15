@@ -6,7 +6,7 @@ import top.andnana.entity.User;
 import top.andnana.entity.UserExample;
 
 public interface UserMapper {
-    long countByExample(UserExample example);
+  /*  long countByExample(UserExample example);
 
     int deleteByExample(UserExample example);
 
@@ -26,5 +26,9 @@ public interface UserMapper {
 
     int updateByPrimaryKeySelective(User record);
 
-    int updateByPrimaryKey(User record);
+    int updateByPrimaryKey(User record);*/
+
+    public List<User> selectAll();
+
+    public User selectUserByUsername(@Param("username") String username);
 }
