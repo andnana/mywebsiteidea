@@ -12,13 +12,47 @@
   <meta name="keywords" content="java,android,java web,小程序，微信公众平台，安卓,网站开,程序开发" />
 <meta name="description" content="一个程序开发人员的网站，个人介绍。个人程序相关信息。
 " />
-<link href="${ctx}/resources/css/02.css" rel="stylesheet" type="text/css" midia="screen" />
+<link href="${ctx}/resources/css/02.css" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript" src="${ctx}/resources/js/jquery-1.4.3.js"></script>
 	<link href="${ctx}/resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" midia="screen" />
 	<link href="${ctx}/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js" rel="stylesheet" type="text/css" midia="screen" />
 </head>
 
 <body>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12"><h1>ssm crud</h1></div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-8">
+			<button class="btn btn-success">新增</button>
+			<button class="btn btn-success">删除</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-striped table-hover">
+				<caption>用户信息</caption>
+				<thead><th>id</th><th>用户名</th><th>操作</th></thead>
+				<c:forEach items="${pageInfo.list}" var="user">
+
+					<tr>
+						<td>${user.id}</td>
+						<td>${user.username}</td>
+						<td>
+							<button class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>编辑</button>
+							<button class="btn btn-success btn-sm"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>删除</button>
+
+
+						</td>
+					</tr>
+				</c:forEach>
+
+			</table>
+		</div>
+	</div>
+	<div class="row"></div>
+</div>
 <div id="container">
 <div id="banner">
 	<!--<span>仙人掌网站制作</span>-->
@@ -32,6 +66,7 @@
 </div>-->
 <div id="content">
 <h1>${message}:)</h1>
+
 <div class="text">
 		<p>
 编写好的程序程序是可以当作一项重要的人生目标。成为技术水平高的程序编写人要经过大量的学习实践。</p>

@@ -99,7 +99,7 @@
   <insert id="insert" parameterType="top.andnana.entity.Department">
     insert into dept (Id, dept_name)
     values (#{id,jdbcType=INTEGER}, #{deptName,jdbcType=VARCHAR})
-  </insert>
+  </insert>-->
   <insert id="insertSelective" parameterType="top.andnana.entity.Department">
     insert into dept
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -119,6 +119,7 @@
       </if>
     </trim>
   </insert>
+  <!--
   <select id="countByExample" parameterType="top.andnana.entity.DepartmentExample" resultType="java.lang.Long">
     select count(*) from dept
     <if test="_parameter != null">
