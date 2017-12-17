@@ -47,6 +47,7 @@ public class MVCTest {
         for (int i = 0; i < pages.length; i++) {
             System.out.println(" " + pages[i]);
         }
+
         System.out.println("员工数据：");
         List<User> userList = pageInfo.getList();
         for (int i = 0; i < userList.size(); i++) {

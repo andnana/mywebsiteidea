@@ -6,23 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f91a3fc-88ab-475f-a533-d8deb8dba83f" name="Default" comment="commit 20171216">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/top/andnana/test/MVCTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/top/andnana/test/MapperTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_0_9_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_0_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_geronimo_specs_geronimo_servlet_3_0_spec_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_7_RELEASE.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/config/mybatis/mapper/DepartmentMapper.xml" afterPath="$PROJECT_DIR$/src/main/config/mybatis/mapper/DepartmentMapper.xml" />
+    <list default="true" id="3f91a3fc-88ab-475f-a533-d8deb8dba83f" name="Default" comment="2017121701commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/top/andnana/entity/Msg.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java" afterPath="$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/andnanatest01.iml" afterPath="$PROJECT_DIR$/andnanatest01.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/andnanatest01_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/andnanatest01_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/top/andnana/test/MVCTest.java" afterPath="$PROJECT_DIR$/src/main/java/top/andnana/test/MVCTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/config/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/config/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/config/mybatis-cfg.xml" afterPath="$PROJECT_DIR$/src/main/config/mybatis-cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/ssm.log" afterPath="$PROJECT_DIR$/logs/ssm.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,11 +42,77 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/service/UserService.java">
+      <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="644">
-              <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="1564">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1472">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1449">
+              <caret line="51" column="80" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Msg.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/entity/Msg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1357">
+              <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#359#360#0" expanded="true" />
+                <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#421#422#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#485#486#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+                <element signature="e#683#684#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/config/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.64" vertical-offset="534" max-vertical-offset="1288">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#1665#1681#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spring-mvc-servlet.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="690">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -61,48 +121,18 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1897" max-vertical-offset="3657">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2316" max-vertical-offset="3657">
+              <caret line="121" column="45" selection-start-line="121" selection-start-column="45" selection-end-line="121" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapperTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/test/MapperTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1012">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybatis-cfg.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/config/mybatis-cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="851">
-              <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="966">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MVCTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MVCTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/test/MVCTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48867315" vertical-offset="526" max-vertical-offset="1426">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1449">
+              <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,45 +140,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MBGTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/test/MBGTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="1035">
-              <caret line="40" column="32" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.8125" vertical-offset="104" max-vertical-offset="2875">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.375" vertical-offset="1185" max-vertical-offset="3887">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepartmentMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/dao/DepartmentMapper.java">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="736">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1863">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/entity/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="782">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-              <folding>
-                <element signature="e#688#689#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -168,22 +175,26 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/top/andnana/entity/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/andnana/dao/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dsfasdf-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/top/andnana/test/MBGTest.java" />
         <option value="$PROJECT_DIR$/mbg.xml" />
-        <option value="$PROJECT_DIR$/src/main/config/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/java/top/andnana/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/config/mybatis/mapper/userMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/top/andnana/dao/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/config/mybatis/mapper/DepartmentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/config/mybatis-cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/top/andnana/test/MapperTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/andnana/test/MVCTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/config/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/top/andnana/entity/Msg.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/index.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -287,6 +298,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -422,6 +435,36 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="andnanatest01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="andnanatest01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -523,14 +566,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="andnanatest01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="andnanatest01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="andnana" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="andnanatest01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="andnanatest01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
@@ -553,18 +646,18 @@
     <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\webapp" />
+      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\config" />
+      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\webapp\WEB-INF" />
+      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\java\top\andnana" />
+      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\java\top\andnana\entity" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="top.andnana" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\config" />
-      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\java\top\andnana" />
-      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\java\top\andnana\entity" />
-      <recent name="C:\Users\Administrator\IdeaProjects\andnanatest01\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -579,7 +672,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MVCTest.testPage (1)">
+  <component name="RunManager" selected="Tomcat Server.andnanatest01server">
     <configuration default="false" name="MBGTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1011,7 +1104,9 @@
       <workItem from="1513390217604" duration="614000" />
       <workItem from="1513390877200" duration="1492000" />
       <workItem from="1513396199758" duration="2598000" />
-      <workItem from="1513409756469" duration="10694000" />
+      <workItem from="1513409756469" duration="11938000" />
+      <workItem from="1513472740804" duration="7318000" />
+      <workItem from="1513499185892" duration="8163000" />
     </task>
     <task id="LOCAL-00001" summary="commit02">
       <created>1512138606883</created>
@@ -1043,11 +1138,17 @@
       <option name="project" value="LOCAL" />
       <updated>1513335584195</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="commit 20171216">
+      <created>1513420721267</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1513420721267</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55793000" />
+    <option name="totallyTimeSpent" value="72518000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1075,20 +1176,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45284975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45284975" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31606218" sideWeight="0.21428572" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45284975" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15031983" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.098614074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31606218" sideWeight="0.78571427" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31606218" sideWeight="0.78571427" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953367" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19029851" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14498934" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1134,7 +1235,9 @@
     <MESSAGE value="commit 01" />
     <MESSAGE value="commit 02" />
     <MESSAGE value="commit 20171216" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit 20171216" />
+    <MESSAGE value="2017121601commit" />
+    <MESSAGE value="2017121701commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017121701commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1145,65 +1248,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/config/mybatis/mapper/userMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="608">
-          <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="380">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="722">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="494">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#581#582#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1225,7 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="532">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1248,7 +1299,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="836">
           <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-          <folding />
+          <folding>
+            <element signature="e#1665#1681#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1256,36 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="608">
           <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1293,9 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="380">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1310,7 +1330,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="494">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#581#582#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1332,7 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="646">
           <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1355,7 +1377,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="836">
           <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-          <folding />
+          <folding>
+            <element signature="e#1665#1681#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1363,36 +1387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="608">
           <caret line="23" column="54" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding>
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1400,9 +1394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="456">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1417,7 +1408,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="494">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#581#582#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1425,29 +1419,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.75" vertical-offset="57" max-vertical-offset="1539">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="1426">
-          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="21" max-vertical-offset="690">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1487,21 +1458,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/config/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1242">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="460">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1509,49 +1469,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9752">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#247#248#0" expanded="false" />
-            <element signature="e#303#304#0" expanded="false" />
-            <element signature="e#361#362#0" expanded="false" />
-            <element signature="e#411#412#0" expanded="false" />
-            <element signature="e#451#452#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-            <element signature="e#536#537#0" expanded="false" />
-            <element signature="e#576#577#0" expanded="false" />
-            <element signature="e#611#612#0" expanded="false" />
-            <element signature="e#642#643#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#724#725#0" expanded="false" />
-            <element signature="e#765#766#0" expanded="false" />
-            <element signature="e#807#808#0" expanded="false" />
-            <element signature="e#1676#1677#0" expanded="false" />
-            <element signature="e#1726#1727#0" expanded="false" />
-            <element signature="e#1777#1778#0" expanded="false" />
-            <element signature="e#1816#1817#0" expanded="false" />
-            <element signature="e#1864#1865#0" expanded="false" />
-            <element signature="e#1903#1904#0" expanded="false" />
-            <element signature="e#11544#11545#0" expanded="false" />
-            <element signature="e#11575#11576#0" expanded="false" />
-            <element signature="e#11944#11945#0" expanded="false" />
-            <element signature="e#11984#11985#0" expanded="false" />
-            <element signature="e#12020#12021#0" expanded="false" />
-            <element signature="e#12056#12057#0" expanded="false" />
-            <element signature="e#12098#12099#0" expanded="false" />
-            <element signature="e#12140#12141#0" expanded="false" />
-            <element signature="e#12178#12179#0" expanded="false" />
-            <element signature="e#12216#12217#0" expanded="false" />
-            <element signature="e#12258#12259#0" expanded="false" />
-            <element signature="e#12300#12301#0" expanded="false" />
-            <element signature="e#12343#12344#0" expanded="false" />
-            <element signature="e#12386#12387#0" expanded="false" />
-            <element signature="e#12426#12427#0" expanded="false" />
-            <element signature="e#12466#12467#0" expanded="false" />
-            <element signature="e#12508#12509#0" expanded="false" />
-            <element signature="e#12550#12551#0" expanded="false" />
-            <element signature="e#13192#13193#0" expanded="false" />
-            <element signature="e#13244#13245#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1559,36 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="115" max-vertical-offset="9522">
           <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-          <folding>
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select disti..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select from ..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select count..user..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="update user ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-            <marker date="1513335418945" expanded="true" signature="-1:-1" placeholder="select * fro..User..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1596,7 +1483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="276" max-vertical-offset="897">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1604,7 +1490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="805">
           <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1612,7 +1497,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="414">
           <caret line="5" column="10" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1620,39 +1504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2206" max-vertical-offset="7590">
           <caret line="120" column="10" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="10" />
-          <folding>
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="select count..dept..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="update dept ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="update dept ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="update dept ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="select from ..dept..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="select count..dept..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="update dept ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="update dept ..." />
-            <marker date="1513404516319" expanded="true" signature="-1:-1" placeholder="update dept ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/dao/DepartmentMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="736">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="782">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-          <folding>
-            <element signature="e#688#689#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1668,31 +1519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="644">
           <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="966">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1897" max-vertical-offset="3657">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.8125" vertical-offset="104" max-vertical-offset="2875">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1712,13 +1538,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.710356" vertical-offset="44" max-vertical-offset="782">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding>
+            <element signature="e#581#582#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/dao/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="736">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2316" max-vertical-offset="3657">
+          <caret line="121" column="45" selection-start-line="121" selection-start-column="45" selection-end-line="121" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/entity/Msg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="634" max-vertical-offset="1357">
+          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#421#422#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/config/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.64" vertical-offset="534" max-vertical-offset="1288">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#1665#1681#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-mvc-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3" max-vertical-offset="690">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/controller/Index.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="946" max-vertical-offset="1564">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1472">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/view/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3532423" vertical-offset="0" max-vertical-offset="3795">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/andnana/test/MVCTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48867315" vertical-offset="526" max-vertical-offset="1426">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1449">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1449">
+          <caret line="51" column="80" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.375" vertical-offset="1185" max-vertical-offset="3887">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1863">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

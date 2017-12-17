@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import top.andnana.entity.Msg;
 import top.andnana.entity.User;
 import top.andnana.service.UserService;
 
@@ -17,25 +18,49 @@ public class Index {
 	@Autowired
 	UserService userService;
  
-//	    public String HelloWorld(Model model){
-//	 public String HelloWorld(){
-     @RequestMapping({"/", "/index"}) 
-	 public String HelloWorld(@RequestParam(value="pageNumber", defaultValue = "1") Integer pageNumber, Model model){
-		 PageHelper.startPage(pageNumber, 2);
-		   List<User> userList = userService.selectAll();
-		 PageInfo pageInfo = new PageInfo(userList, 5);
 
-	        model.addAttribute("message","Hello World!!!!"); 
-//		   model.addAttribute("userList", userList);
-		 model.addAttribute("pageInfo", pageInfo);
-//		   System.out.println(userList);
-	        System.out.println("dfsdfsadf");
-		   
-	        return "index";
-		   
-//		   return userList;
-	    }  
-	 @ResponseBody
+    /* @RequestMapping({"/", "/index"})
+		  public String HelloWorld(@RequestParam(value="pageNumber", defaultValue = "1") Integer pageNumber, Model model){
+		PageHelper.startPage(pageNumber, 2);
+		List<User> userList = userService.selectAll();
+		PageInfo pageInfo = new PageInfo(userList, 5);
+
+		model.addAttribute("message","Hello World!!!!");
+
+		model.addAttribute("pageInfo", pageInfo);
+
+		System.out.println("dfsdfsadf");
+
+		return "index";
+
+
+	}*/
+
+//	@RequestMapping({"/", "/index"})
+    @RequestMapping({"/index"})
+	@ResponseBody
+	public Msg HelloWorld(@RequestParam(value="pageNumber", defaultValue = "1") Integer pageNumber){
+		PageHelper.startPage(pageNumber, 2);
+		List<User> userList = userService.selectAll();
+		PageInfo pageInfo = new PageInfo(userList, 5);
+
+		System.out.println("员工数据：");
+
+		for (int i = 0; i < userList.size(); i++) {
+			System.out.println(userList.get(i).getUsername());
+		}
+
+		System.out.println("dfsdfsadf");
+		Msg msg = new Msg();
+		Msg.success().getMyInfo().put("myInfo", pageInfo);
+
+
+		return Msg.success().add("myInfo", pageInfo);
+
+
+	}
+
+	@ResponseBody
 	 @RequestMapping(value="/index/{username}", method=RequestMethod.GET)
 	 public User HelloWorld(@PathVariable("username") String username){
 		 System.out.println(username + "username");
@@ -43,4 +68,6 @@ public class Index {
 		 System.out.println(user+"user");
 		 return user;
 	 }
+
+
 }

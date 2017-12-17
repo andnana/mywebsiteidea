@@ -29,6 +29,8 @@
 		 	<property name="dataSource" ref="dataSource" />
 		 </bean>
 		 <!--<tx:annotation-driven transaction-manager="datasourceTransactionManager" /> -->
+	    <tx:annotation-driven />
+
 		 <aop:config>
 			 <aop:pointcut id="txPointCut" expression="execution(* top.andnana.service..*.*(..))" />
 			<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut" />

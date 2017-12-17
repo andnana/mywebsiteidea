@@ -14,6 +14,7 @@
 " />
 <link href="${ctx}/resources/css/02.css" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript" src="${ctx}/resources/js/jquery-1.4.3.js"></script>
+	<script type="text/javascript" src="${ctx}/resources/js/index.js"></script>
 	<link href="${ctx}/resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" midia="screen" />
 	<link href="${ctx}/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js" rel="stylesheet" type="text/css" midia="screen" />
 </head>
@@ -34,7 +35,7 @@
 			<table class="table table-striped table-hover">
 				<caption>用户信息</caption>
 				<thead><th>id</th><th>用户名</th><th>操作</th></thead>
-				<c:forEach items="${pageInfo.list}" var="user">
+				<%--<c:forEach items="${pageInfo.list}" var="user">
 
 					<tr>
 						<td>${user.id}</td>
@@ -46,14 +47,17 @@
 
 						</td>
 					</tr>
-				</c:forEach>
+				</c:forEach>--%>
+				<tbody>
+
+				</tbody>
 
 			</table>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-6">
-			第${pageInfo.pageNum}页&nbsp;总共${pageInfo.pages}页 总共${pageInfo.total}条记录
+		<div class="col-md-6" id="pageInfo">
+
 		</div>
 		<div class="col-md-6">
 			<nav aria-label="Page navigation">
