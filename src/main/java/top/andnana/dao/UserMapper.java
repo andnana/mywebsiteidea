@@ -28,7 +28,11 @@ public interface UserMapper {
 
     int updateByPrimaryKey(User record);*/
 
+    public void insertUser(User user);
+
     public List<User> selectAll();
 
     public User selectUserByUsername(@Param("username") String username);
+
+    public User selectUserById(@Param("id") Integer id);
 }

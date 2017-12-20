@@ -5,6 +5,7 @@
     <id column="Id" jdbcType="INTEGER" property="id" />
     <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
   </resultMap>
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -63,9 +64,12 @@
       </foreach>
     </where>
   </sql>
+
   <sql id="Base_Column_List">
     Id, dept_name
   </sql>
+
+
   <select id="selectByExample" parameterType="top.andnana.entity.DepartmentExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -80,6 +84,7 @@
       order by ${orderByClause}
     </if>
   </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -99,7 +104,7 @@
   <insert id="insert" parameterType="top.andnana.entity.Department">
     insert into dept (Id, dept_name)
     values (#{id,jdbcType=INTEGER}, #{deptName,jdbcType=VARCHAR})
-  </insert>-->
+  </insert>
   <insert id="insertSelective" parameterType="top.andnana.entity.Department">
     insert into dept
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -119,7 +124,8 @@
       </if>
     </trim>
   </insert>
-  <!--
+
+
   <select id="countByExample" parameterType="top.andnana.entity.DepartmentExample" resultType="java.lang.Long">
     select count(*) from dept
     <if test="_parameter != null">
@@ -322,4 +328,7 @@
     set dept_name = #{deptName,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}
   </update> -->
+  <select id="selectAll" resultType="top.andnana.entity.Department">
+    select * from dept
+  </select>
 </mapper>

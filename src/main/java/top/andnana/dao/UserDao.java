@@ -15,4 +15,5 @@ public interface UserDao {
 	public void updateUser(User user);
 	public void deleteUser(Integer id);
 	public User selectUserByUsername(@Param("username") String username);
+
 }

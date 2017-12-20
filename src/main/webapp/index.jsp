@@ -13,20 +13,144 @@
 <meta name="description" content="一个程序开发人员的网站，个人介绍。个人程序相关信息。
 " />
 <link href="${ctx}/resources/css/02.css" rel="stylesheet" type="text/css"/>
-	<script type="text/javascript" src="${ctx}/resources/js/jquery-1.4.3.js"></script>
-	<script type="text/javascript" src="${ctx}/resources/js/index.js"></script>
+	<script type="text/javascript" src="${ctx}/resources/js/jquery-2.1.4.js"></script>
+
 	<link href="${ctx}/resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" midia="screen" />
-	<link href="${ctx}/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js" rel="stylesheet" type="text/css" midia="screen" />
+	<script type="text/javascript" src="${ctx}/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="${ctx}/resources/js/index.js"></script>
 </head>
 
 <body>
+
+<div class="modal fade" id="updateUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">用户修改</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="username" class="col-sm-2 control-label">用户名</label>
+						<div class="col-sm-10">
+							<%--<input type="text" class="form-control"  name="username" placeholder="用户名">--%>
+							<p class="form-control-static">email@example.com</p>
+							<%--<span class="help-block"></span>--%>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-sm-2 control-label">密码</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" name="password"  placeholder="密码">
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">电子邮箱</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="email"  placeholder="电子邮箱">
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label  class="col-sm-2 control-label">性别</label>
+						<div class="col-sm-10">
+							<label class="radio-inline">
+								<input type="radio" name="gender" value="M"> 男
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="gender" value="F"> 女
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">所属部门</label>
+						<div class="col-sm-6">
+							<select class="form-control" name="deptId">
+
+							</select>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary" id="updateUserBtn">更新</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" >用户添加</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label for="username" class="col-sm-2 control-label">用户名</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" id="username" name="username" placeholder="用户名">
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password" class="col-sm-2 control-label">密码</label>
+						<div class="col-sm-10">
+							<input type="password" class="form-control" name="password" id="password" placeholder="密码">
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">电子邮箱</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="email" id="email" placeholder="电子邮箱">
+							<span class="help-block"></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label  class="col-sm-2 control-label">性别</label>
+						<div class="col-sm-10">
+							<label class="radio-inline">
+								<input type="radio" name="gender" id="gender1" value="M" checked="checked"> 男
+							</label>
+							<label class="radio-inline">
+								<input type="radio" name="gender" id="gender2" value="F"> 女
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">所属部门</label>
+						<div class="col-sm-6">
+							<select class="form-control" name="deptId">
+
+							</select>
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary" id="saveUserBtn">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="container">
+
 	<div class="row">
 		<div class="col-lg-12"><h1>ssm crud</h1></div>
 	</div>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-8">
-			<button class="btn btn-success">新增</button>
+			<button class="btn btn-success" id="addUserModelBtn">新增</button>
 			<button class="btn btn-success">删除</button>
 		</div>
 	</div>
@@ -59,8 +183,8 @@
 		<div class="col-md-6" id="pageInfo">
 
 		</div>
-		<div class="col-md-6">
-			<nav aria-label="Page navigation">
+		<div class="col-md-6" id="pageNav">
+			<%--<nav aria-label="Page navigation">
 				<ul class="pagination">
 					<c:if test="${pageInfo.hasPreviousPage}">
 						<li><a href="${ctx}/index?pageNumber=1">首页</a></li>
@@ -93,9 +217,11 @@
 					</c:if>
 
 				</ul>
-			</nav>
+			</nav>--%>
 		</div>
 	</div>
+
+
 </div>
 <div id="container">
 <div id="banner">

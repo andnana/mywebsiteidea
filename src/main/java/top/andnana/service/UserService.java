@@ -28,4 +28,22 @@ public class UserService {
 		}
 		return user;
 	}
+
+	public void saveUser(User user) {
+		userMapper.insertUser(user);
+	}
+
+	public boolean checkUsername(String username) {
+		User user = userMapper.selectUserByUsername(username);
+		if(user != null){
+		    return true;
+		}else {
+			return false;
+		}
+	}
+
+	public User getUser(Integer id) {
+		User user = userMapper.selectUserById(id);
+		return user;
+	}
 }

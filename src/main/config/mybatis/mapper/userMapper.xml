@@ -397,6 +397,20 @@ select * from User where username = #{username}
 <delete id="deleteUser">
 	delete from user where id = #{id}
 </delete>-->
+  <sql id="Base_Column_List">
+    Id, username, password, email, gender, dept_id
+  </sql>
+
+  <resultMap id="BaseResultMap" type="top.andnana.entity.User">
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="dept_id" jdbcType="INTEGER" property="deptId" />
+  </resultMap>
+  <insert id="insertUser">
+    insert into user (username, password, email, gender, dept_id) values(#{username}, #{password}, #{email}, #{gender}, #{deptId})
+  </insert>
             
 <select id="selectUserByUsername" parameterType="java.lang.String" resultType="top.andnana.entity.User">
 	<!-- select * from User where username = #{param1} -->
@@ -406,4 +420,11 @@ select * from User where username = #{username}
 <select id="selectAll" resultType="top.andnana.entity.User">
 	select * from User
 </select>
+
+  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
 </mapper>
