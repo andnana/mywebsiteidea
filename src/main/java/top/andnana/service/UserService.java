@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import top.andnana.dao.UserMapper;
 import top.andnana.entity.User;
+import top.andnana.entity.UserExample;
 
 @Service
 public class UserService {
@@ -45,5 +46,21 @@ public class UserService {
 	public User getUser(Integer id) {
 		User user = userMapper.selectUserById(id);
 		return user;
+	}
+
+	public void updateByPrimaryKeySelective(User user) {
+		userMapper.updateByPrimaryKeySelective(user);
+
+	}
+
+	public void deleteByPrimaryKey(Integer id) {
+		userMapper.deleteByPrimaryKey(id);
+	}
+
+	public void deleteByExample(List<Integer> ids){
+		UserExample userExample = new UserExample();
+		UserExample.Criteria criteria = userExample.createCriteria();
+		criteria.andIdIn(ids);
+		userMapper.deleteByExample(userExample);
 	}
 }

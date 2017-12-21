@@ -35,4 +35,10 @@ public interface UserMapper {
     public User selectUserByUsername(@Param("username") String username);
 
     public User selectUserById(@Param("id") Integer id);
+
+    public void updateByPrimaryKeySelective(User user);
+
+    public void deleteByPrimaryKey(Integer id);
+
+    public int deleteByExample(UserExample example);
 }

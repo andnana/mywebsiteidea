@@ -10,6 +10,7 @@ import top.andnana.entity.User;
 import top.andnana.service.UserService;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,9 +22,17 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
-    @RequestMapping(value="/dept", method = RequestMethod.POST)
+    @RequestMapping(value="/user/{id}", method = RequestMethod.PUT)
     @ResponseBody
-    public Msg saveDept(@Valid User user, BindingResult result){
+    public Msg updateUser(@Valid User user){
+
+        userService.updateByPrimaryKeySelective(user);
+
+        return Msg.success();
+    }
+    @RequestMapping(value="/user", method = RequestMethod.POST)
+    @ResponseBody
+    public Msg saveUser(@Valid User user, BindingResult result){
         if(result.hasErrors()){
             List<FieldError> errors = result.getFieldErrors();
             Map<String, Object> errorsHashMap = new HashMap<>();
@@ -55,5 +64,28 @@ public class UserController {
     public Msg getUser(@PathVariable("id")Integer id){
         User user = userService.getUser(id);
         return  Msg.success().add("user", user);
+    }
+//    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+//    @ResponseBody
+//    public Msg deleteUserById(@PathVariable("id")Integer id){
+//        userService.deleteByPrimaryKey(id);
+//        return Msg.success();
+//    }
+    @RequestMapping(value = "/user/{ids}", method = RequestMethod.DELETE)
+    @ResponseBody
+    public Msg deleteUserById(@PathVariable("ids")String ids){
+        if(ids.contains("-")){
+            String[] ids_String = ids.split("-");
+            List<Integer> ids_Integer = new ArrayList<>();
+            for (int i = 0; i < ids_String.length; i++) {
+                ids_Integer.add(Integer.parseInt(ids_String[i]));
+            }
+            userService.deleteByExample(ids_Integer);
+        }else {
+            Integer id = Integer.parseInt(ids);
+            userService.deleteByPrimaryKey(id);
+        }
+
+        return Msg.success();
     }
 }

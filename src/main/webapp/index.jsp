@@ -64,6 +64,8 @@
 							</label>
 						</div>
 					</div>
+					<input type="hidden" name="userid" value="" />
+					<input type="hidden" name="pageNumber" value="" />
 					<div class="form-group">
 						<label for="email" class="col-sm-2 control-label">所属部门</label>
 						<div class="col-sm-6">
@@ -151,14 +153,14 @@
 	<div class="row">
 		<div class="col-md-4 col-md-offset-8">
 			<button class="btn btn-success" id="addUserModelBtn">新增</button>
-			<button class="btn btn-success">删除</button>
+			<button class="btn btn-danger" id="deleteAllUserBtn">删除</button>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-md-12">
 			<table class="table table-striped table-hover">
 				<caption>用户信息</caption>
-				<thead><th>id</th><th>用户名</th><th>操作</th></thead>
+				<thead><th><input type="checkbox" id = "check_all"></th><th>id</th><th>用户名</th><th>操作</th></thead>
 				<%--<c:forEach items="${pageInfo.list}" var="user">
 
 					<tr>

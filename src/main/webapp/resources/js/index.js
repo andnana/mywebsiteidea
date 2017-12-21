@@ -36,9 +36,12 @@ $(function(){
 
         $.each(users, function(index, user){
             console.log(user.username);
+            var checkBoxInput = $("<input type='checkbox' />");
+            var checkBoxTd = $("<td></td>");
+            checkBoxTd.append(checkBoxInput);
             var useridTd = $("<td></td>").append(user.id);
             var usernameTd = $("<td></td>").append(user.username);
-            var tr = $("<tr></tr>").append(useridTd).append(usernameTd).appendTo("tbody");
+            var tr = $("<tr></tr>").append(checkBoxTd).append(useridTd).append(usernameTd).appendTo("tbody");
             /**
               <td>
              <button class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>编辑</button>
@@ -52,6 +55,7 @@ $(function(){
             var userEditBtn = $("<button></button>").addClass("btn btn-success btn-sm").append($("<span></span>").addClass("glyphicon glyphicon-pencil").attr("aria-hidden","true")).append("编辑");
             userEditBtn.attr("userid", user.id);
             var userDeleteBtn = $("<button></button>").addClass("btn btn-danger btn-sm").append($("<span></span>").addClass("glyphicon glyphicon-trash").attr("aria-hidden","true")).append("删除");
+            userDeleteBtn.attr("userid", user.id);
             userBtnTd.append(userEditBtn).append(" ").append(userDeleteBtn);
             tr.append(userBtnTd);
         });
@@ -65,6 +69,69 @@ $(function(){
             //show:true,
             //backdrop:"static"
         });
+    });
+    $("tbody").on("click", ".btn-danger", function(){
+        console.log("delete button click");
+
+        var userid = $(this).attr("userid")
+        console.log($(this).attr("userid"));
+        var username = $(this).parent().parent().find("td:eq(2)").text();
+        if(confirm("确认删除名字为" + username + "的用户吗？")){
+            console.log("确认");
+            $.ajax({
+                url: basePath + "/user/" + userid,
+                data: {},
+                type:"DELETE",
+                success:function(data) {
+                    var pageNumber = $("#updateUserModal input[name='pageNumber']").val();
+                    toPage(pageNumber);
+                }
+            });
+        }else{
+            console.log("取消");
+        }
+    });
+    $("#check_all").click(function(){
+        console.log($(this).prop("checked"));
+        $("tbody input[type='checkbox']").prop("checked", $(this).prop("checked"));
+    });
+    $("tbody").on("click", "input[type='checkbox']", function(){
+        if($("tbody input[type='checkbox']:checked").length == $("tbody input[type='checkbox']").length){
+            $("#check_all").prop("checked", true);
+        }else{
+            $("#check_all").prop("checked", false);
+        }
+    });
+    $("#deleteAllUserBtn").click(function(){
+        var usernames = "";
+        var ids = "" ;
+        $.each($("tbody input[type='checkbox']:checked"), function(index){
+            console.log(index);
+            console.log($(this).parent().parent().find("td:eq(2)").text());
+
+            if(index != ($("tbody input[type='checkbox']:checked").length - 1)){
+                usernames += $(this).parent().parent().find("td:eq(2)").text() + ",";
+                ids += $(this).parent().parent().find("td:eq(1)").text() + "-";
+            }else{
+                usernames += $(this).parent().parent().find("td:eq(2)").text();
+                ids += $(this).parent().parent().find("td:eq(1)").text();
+            }
+
+        });
+        if(($("tbody input[type='checkbox']:checked").length >= 1) && confirm("确认删除名字为：" + usernames + "的用户吗？")){
+            console.log("确认");
+            $.ajax({
+                url: basePath + "/user/" + ids,
+                data: {},
+                type:"DELETE",
+                success:function(data) {
+                    var pageNumber = $("#updateUserModal input[name='pageNumber']").val();
+                    toPage(pageNumber);
+                }
+            });
+        }else{
+            console.log("取消");
+        }
     });
     function getUser(id){
         $.ajax({
@@ -81,6 +148,8 @@ $(function(){
 
             $("#updateUserModal select").val([data.myInfo.user.deptId]);
 
+            $("#updateUserModal input[name='userid']").val(data.myInfo.user.id);
+
             }
         });
     }
@@ -90,6 +159,8 @@ $(function(){
         $("#pageInfo").empty();
         //第${pageInfo.pageNum}页&nbsp;总共${pageInfo.pages}页 总共${pageInfo.total}条记录
         $("#pageInfo").append("第"+ data.myInfo.myInfo.pageNum +"页&nbsp;总共"+ data.myInfo.myInfo.pages +"页 总共"+ data.myInfo.myInfo.total +"条记录")
+        $("#updateUserModal input[name='pageNumber']").val(data.myInfo.myInfo.pageNum);
+
     }
     function initPageNav(data){
         $("#pageNav").empty();
@@ -208,48 +279,48 @@ $(function(){
     //
     //}
     function validateFormData(){
-        var username = $("input[name='username']").val();
+        var username = $("#addUserModal input[name='username']").val();
         var usernameReg = /(^[a-zA-Z0-9_-]{3,16})|(^[\u2E80-\u9FFF]{2,5}$)/;
         console.log(usernameReg.test(username));
         if(!usernameReg.test(username)){
             //alert("用户名在3-16位英文字符，或2-5位中文。（a-zA-Z0-9_-)")
             //$("input[name='username']").parent().addClass("has-error");
             //$("input[name='username']").next("span").text("用户名在3-16位英文字符，或2-5位中文。（a-zA-Z0-9_-)");
-            updateInputStatus("input[name='username']", "error", "用户名在3-16位英文字符，或2-5位中文。（a-zA-Z0-9_-)");
+            updateInputStatus("#addUserModal input[name='username']", "error", "用户名在3-16位英文字符，或2-5位中文。（a-zA-Z0-9_-)");
             return false;
         }else{
             //$("input[name='username']").parent().addClass("has-success");
             //$("input[name='username']").next("span").text("");
-            updateInputStatus("input[name='username']", "success", "");
+            updateInputStatus("#addUserModal input[name='username']", "success", "");
         }
 
-        var password = $("input[name='password']").val();
+        var password = $("#addUserModal input[name='password']").val();
         var passwordReg = /^[a-z0-9_-]{6,18}$/;
         if(!passwordReg.test(password)){
             //alert("密码格式为(a-z0-9_-)长度为6-18位");
             //$("input[name='password']").parent().addClass("has-error");
             //$("input[name='password']").next("span").text("密码格式为(a-z0-9_-)长度为6-18位");
-            updateInputStatus("input[name='password']", "error", "密码格式为(a-z0-9_-)长度为6-18位");
+            updateInputStatus("#addUserModal input[name='password']", "error", "密码格式为(a-z0-9_-)长度为6-18位");
             return false;
         }else{
             //$("input[name='password']").parent().addClass("has-success");
             //$("input[name='password']").next("span").text("");
-            updateInputStatus("input[name='password']", "success", "");
+            updateInputStatus("#addUserModal input[name='password']", "success", "");
         }
 
 
-        var email = $("input[name='email']").val();
+        var email = $("#addUserModal input[name='email']").val();
         var emailReg = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         if(!emailReg.test(email)){
             //alert("电子邮箱格式为(a-z0-9_.-)");
             //$("input[name='email']").parent().addClass("has-error");
             //$("input[name='email']").next("span").text("电子邮箱格式为(a-z0-9_.-)");
-            updateInputStatus("input[name='email']", "error", "电子邮箱格式为(a-z0-9_.-)");
+            updateInputStatus("#addUserModal input[name='email']", "error", "电子邮箱格式为(a-z0-9_.-)");
             return false;
         }else{
             //$("input[name='email']").parent().addClass("has-success");
             //$("input[name='email']").next("span").text("");
-            updateInputStatus("input[name='email']", "success", "");
+            updateInputStatus("#addUserModal input[name='email']", "success", "");
         }
 
 
@@ -266,17 +337,68 @@ $(function(){
             $(ele).next("span").text(text);
         }
     }
+    $("#updateUserBtn").click(function(){
+        var password = $("#updateUserModal input[name='password']").val();
+        var passwordReg = /^[a-z0-9_-]{6,18}$/;
+        if(!passwordReg.test(password)){
+            //alert("密码格式为(a-z0-9_-)长度为6-18位");
+            //$("input[name='password']").parent().addClass("has-error");
+            //$("input[name='password']").next("span").text("密码格式为(a-z0-9_-)长度为6-18位");
+            updateInputStatus("#updateUserModal input[name='password']", "error", "密码格式为(a-z0-9_-)长度为6-18位");
+            return false;
+        }else{
+            //$("input[name='password']").parent().addClass("has-success");
+            //$("input[name='password']").next("span").text("");
+            updateInputStatus("#updateUserModal input[name='password']", "success", "");
+        }
+
+
+        var email = $("#updateUserModal input[name='email']").val();
+        var emailReg = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+        if(!emailReg.test(email)){
+            //alert("电子邮箱格式为(a-z0-9_.-)");
+            //$("input[name='email']").parent().addClass("has-error");
+            //$("input[name='email']").next("span").text("电子邮箱格式为(a-z0-9_.-)");
+            updateInputStatus("#updateUserModal input[name='email']", "error", "电子邮箱格式为(a-z0-9_.-)");
+            return false;
+        }else{
+            //$("input[name='email']").parent().addClass("has-success");
+            //$("input[name='email']").next("span").text("");
+            updateInputStatus("#updateUserModal input[name='email']", "success", "");
+        }
+        var userid = $("#updateUserModal input[name='userid']").val();
+    /*    $.ajax({
+            url: basePath + "/user/" + userid,
+            type: "post",
+            data: $("#updateUserModal form").serialize() + "&_method=PUT",
+            success: function(data){
+                console.log(data.msg);
+            }
+        });*/
+        $.ajax({
+            url: basePath + "/user/" + userid,
+            type: "PUT",
+            data: $("#updateUserModal form").serialize(),
+            success: function(data){
+                console.log(data.msg);
+                $("#updateUserModal").modal("hide");
+                var pageNumber = $("#updateUserModal input[name='pageNumber']").val();
+                toPage(pageNumber);
+
+            }
+        });
+    });
     $("#saveUserBtn").click(function(){
 
-      /*  if(!validateFormData()){
+        if(!validateFormData()){
             return false;
         }
         if($("#saveUserBtn").attr("duplicate") == "y"){
             updateInputStatus("input[name='username']", "error", "用户名已存在");
             return false;
-        }*/
+        }
         $.ajax({
-            url: basePath + "/dept",
+            url: basePath + "/user",
             data: $("#addUserModal form").serialize(),
             type:"post",
             success:function(data){
