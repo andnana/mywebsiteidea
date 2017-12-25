@@ -9,16 +9,17 @@ $(function(){
 
     var basePath = localObj.protocol+"//"+localObj.host+"/"+contextPath;
 
-    var server_context=basePath;
+
 
 
     console.log(server_context);
     toPage(1);
     function toPage(pageNumber){
+        var randomNum = Math.floor(Math.random() * 10);
         $.ajax({
                 url: basePath + "/index",
-                data: {pageNumber:pageNumber},
-                type:"post",
+                data: {pageNumber:pageNumber, randomNum:randomNum},
+                type:"get",
                 success:function(data){
                     console.log(data);
                     initUsers(data);
@@ -41,7 +42,12 @@ $(function(){
             checkBoxTd.append(checkBoxInput);
             var useridTd = $("<td></td>").append(user.id);
             var usernameTd = $("<td></td>").append(user.username);
-            var tr = $("<tr></tr>").append(checkBoxTd).append(useridTd).append(usernameTd).appendTo("tbody");
+            var gender = user.gender == "M" ? "男" : "女";
+            var userGenderTd = $("<td></td>").append(gender);
+            var userEmailTd = $("<td></td>").append(user.email);
+            var userDepartmentTd = $("<td></td>").append(user.department.deptName);
+            var tr = $("<tr></tr>").append(checkBoxTd).append(useridTd).append(usernameTd)
+                .append(userGenderTd).append(userEmailTd).append(userDepartmentTd).appendTo("tbody");
             /**
               <td>
              <button class="btn btn-success btn-sm"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>编辑</button>
@@ -134,19 +140,22 @@ $(function(){
         }
     });
     function getUser(id){
+        var randomNum = Math.floor(Math.random() * 10);
         $.ajax({
             url: basePath + "/user/" + id,
-            data: {},
+            data: {"randomNum":randomNum},
             type:"get",
             success:function(data){
                 console.log(data);
             $("p.form-control-static").text(data.myInfo.user.username);
 
+            $("input[name='password']").val(data.myInfo.user.password);
+
             $("input[name='email']").val(data.myInfo.user.email);
 
             $("#updateUserModal input[name='gender']").val([data.myInfo.user.gender]);
 
-            $("#updateUserModal select").val([data.myInfo.user.deptId]);
+            $("#updateUserModal select").val([data.myInfo.user.department.id]);
 
             $("#updateUserModal input[name='userid']").val(data.myInfo.user.id);
 
@@ -403,7 +412,9 @@ $(function(){
             type:"post",
             success:function(data){
                 if(data.code == 200){
-                    toPage(1);
+                    console.log("#$$$$$");
+                    console.log($("#updateUserModal input[name='pageNumber']").val());
+                    toPage($("#updateUserModal input[name='pageNumber']").val());
 
                     $("#addUserModal").modal("hide");
 

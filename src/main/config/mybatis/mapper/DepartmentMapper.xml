@@ -328,7 +328,20 @@
     set dept_name = #{deptName,jdbcType=VARCHAR}
     where Id = #{id,jdbcType=INTEGER}
   </update> -->
+  <sql id="Base_Column_List">
+    Id, dept_name
+  </sql>
+  <resultMap id="BaseResultMap" type="top.andnana.entity.Department">
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="dept_name" jdbcType="VARCHAR" property="deptName" />
+  </resultMap>
   <select id="selectAll" resultType="top.andnana.entity.Department">
     select * from dept
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from dept
+    where Id = #{id,jdbcType=INTEGER}
   </select>
 </mapper>

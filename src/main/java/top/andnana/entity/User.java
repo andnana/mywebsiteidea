@@ -15,6 +15,8 @@ public class User {
 
     private Integer deptId;
 
+    private Department department;
+
     public Integer getId() {
         return id;
     }
@@ -61,5 +63,13 @@ public class User {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

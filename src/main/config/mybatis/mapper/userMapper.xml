@@ -445,16 +445,33 @@ select * from User where username = #{username}
 	<!-- select * from User where username = #{param1} -->
 	 select * from User where username = #{username}
 </select>
+  <resultMap id="userMap" type="top.andnana.entity.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <!--<result column="dept_id" jdbcType="INTEGER" property="department.id" />
+    <result column="dept_name" jdbcType="VARCHAR" property="department.deptName" />-->
+    <association property="department" javaType="top.andnana.entity.Department">
+      <id property="id" column="dept_id" jdbcType="INTEGER" />
+      <result property="deptName" jdbcType="VARCHAR" column="dept_name" />
+
+    </association>
+   <!-- <association property="department" select="top.andnana.dao.DepartmentMapper.selectByPrimaryKey" column="dept_id">
+
+    </association>-->
+  </resultMap>
 <!-- public List&amp;amp;lt;User&amp;amp;gt; selectAll(); -->
-<select id="selectAll" resultType="top.andnana.entity.User">
-	select * from User
+<select id="selectAll" resultMap="userMap">
+/*  	select * from User*/
+  select user.Id, user.username, user.email, user.gender, user.birthday, dept.id as dept_id, dept.dept_name as dept_name FROM user LEFT JOIN dept on dept_id = dept.Id
+
 </select>
 
-  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from user
-    where Id = #{id,jdbcType=INTEGER}
+  <select id="selectUserById" parameterType="java.lang.Integer" resultMap="userMap">
+     select user.id, user.username, user.email, user.gender, user.password , user.birthday, dept.id as dept_id, dept.dept_name as dept_name FROM user LEFT JOIN dept on dept_id = dept.Id
+    where user.id = #{id,jdbcType=INTEGER}
   </select>
   <update id="updateByPrimaryKeySelective" parameterType="top.andnana.entity.User">
     update user

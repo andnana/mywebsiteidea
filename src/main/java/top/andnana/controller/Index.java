@@ -1,5 +1,6 @@
 package top.andnana.controller;
 
+import java.io.FileOutputStream;
 import java.util.List;
 
 import com.github.pagehelper.PageHelper;
@@ -40,6 +41,8 @@ public class Index {
     @RequestMapping({"/index"})
 	@ResponseBody
 	public Msg HelloWorld(@RequestParam(value="pageNumber", defaultValue = "1") Integer pageNumber){
+		System.out.println("pageNumber");
+		System.out.println(pageNumber);
 		PageHelper.startPage(pageNumber, 2);
 		List<User> userList = userService.selectAll();
 		PageInfo pageInfo = new PageInfo(userList, 5);
@@ -54,7 +57,6 @@ public class Index {
 		Msg msg = new Msg();
 		Msg.success().getMyInfo().put("myInfo", pageInfo);
 
-
 		return Msg.success().add("myInfo", pageInfo);
 
 
@@ -66,8 +68,11 @@ public class Index {
 		 System.out.println(username + "username");
 		 User user = userService.findUserByName(username);
 		 System.out.println(user+"user");
+
 		 return user;
+
 	 }
+
 
 
 }
