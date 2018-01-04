@@ -127,7 +127,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="email" class="col-sm-2 control-label">所属部门</label>
+						<label class="col-sm-2 control-label">所属部门</label>
 						<div class="col-sm-6">
 							<select class="form-control" name="deptId">
 
@@ -232,7 +232,7 @@
 	</div>
 <!--<div class="nav">
 	<ul>
-		<li><a href="index.html">首页</a></li>
+		<li><a href="index1.html">首页</a></li>
 		<li><a href="http://www.3v.cm/gbook/index.asp?username=dlrenjie">留言</a></li>
 	</ul>
 </div>-->

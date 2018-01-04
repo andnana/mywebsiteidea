@@ -100,7 +100,7 @@
 	</div>
 <!--<div class="nav">
 	<ul>
-		<li><a href="index.html">首页</a></li>
+		<li><a href="index1.html">首页</a></li>
 		<li><a href="http://www.3v.cm/gbook/index.asp?username=dlrenjie">留言</a></li>
 	</ul>
 </div>-->

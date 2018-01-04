@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="renderer" content="webkit">
+<title></title>
+
+
+<link rel="stylesheet" href="css/pintuer.css">
+<link rel="stylesheet" href="css/admin.css">
+<script src="js/jquery.js"></script>
+<script src="js/pintuer.js"></script>
+  <script src="js/vue.js" type="text/javascript"></script>
+  <script src="js/vue-resource.js" type="text/javascript"></script>
+  <link href="../resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" midia="screen" />
+  <script type="text/javascript" src="../resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="js/addContent.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="wangEditor-2.1.18/dist/css/wangEditor.min.css">
+
+</head>
+<body>
+<div id="app">
+<div class="panel admin-panel">
+  <div class="panel-head" id="add"><strong><span class="icon-pencil-square-o"></span>增加内容</strong></div>
+  <div class="body-content">
+    <!--enctype='multipart/form-data'-->
+    <form id="form" action="../info" class="form-x" method="post" enctype='multipart/form-data'>
+      <div class="form-group">
+        <div class="label">
+          <label>标题：</label>
+        </div>
+        <div class="field">
+          <input type="text" v-model="title" class="input w50" v-on:change="change()" value="" name="title" data-validate="required:请输入标题" />
+          <div class="tips">{{tips}}</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="label">
+          <label>图片：</label>
+        </div>
+        <div class="field">
+          <!--<input type="text" id="url1" name="img" class="input tips" style="width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image="" />-->
+          <input type="file" id="url1" name="img" class="" style="width:25%; float:left;" />
+          <!--<input type="button" class="button bg-blue margin-left" id="image1" value="+ 浏览上传"  style="float:left;">-->
+          <div class="tipss">图片尺寸：500*500</div>
+        </div>
+      </div>     
+      
+      <!--<if condition="$iscid eq 1">-->
+        <div class="form-group">
+          <div class="label">
+            <label>分类：</label>
+          </div>
+          <div class="field">
+            <select name="category.id" class="input w50">
+              <option value="">请选择分类</option>
+              <option v-for="item of category" :value="item.id">{{item.categoryName}}</option>
+
+            </select>
+            <div class="tips"></div>
+          </div>
+        </div>
+
+      <!--</if>-->
+
+      <div class="form-group">
+        <div class="label">
+          <label>标签：</label>
+        </div>
+        <div class="field">
+          <select name="labelIds" class="input w50" multiple="multiple">
+            <option value="">请选择标签</option>
+            <option v-for="item of labelList" :value="item.id">{{item.labelName}}</option>
+
+          </select>
+          <div class="tips"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>内容：</label>
+        </div>
+        <div class="field">
+          <textarea name="content" id="content" class="input" style="height:450px; border:1px solid #ddd;"></textarea>
+          <div class="tips"></div>
+        </div>
+      </div>
+     
+      <div class="clear"></div>
+
+      <div class="form-group">
+        <div class="label">
+          <label></label>
+        </div>
+        <div class="field">
+          <button class="button bg-main icon-check-square-o" @click="saveInfo()"> 提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+  </div>
+<script type="text/javascript" src="wangEditor-2.1.18/dist/js/emotion.js"></script>
+<script type="text/javascript" src="wangEditor-2.1.18/dist/js/lib/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="wangEditor-2.1.18/dist/js/wangEditor.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    var editor = new wangEditor('content');
+    // 配置自定义表情，在 create() 之前配置
+    editor.config.emotions = {
+      // 支持多组表情
+
+      // 第一组，id叫做 'default'
+//      'default': {
+//        title: '默认',  // 组名称
+//        data: './emotions.data'  // 服务器的一个json文件url，例如官网这里配置的是 http://www.wangeditor.com/wangEditor/test/emotions.data
+//      },
+      // 第二组，id叫做'weibo'
+      'weibo': {
+        title: '微博表情',  // 组名称
+        data: emotion
+      }
+      // 下面还可以继续，第三组、第四组、、、
+    };
+    editor.create();
+  });
+</script>
+</body></html>

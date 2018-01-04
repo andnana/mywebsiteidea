@@ -16,11 +16,12 @@ import java.util.List;
  */
 @Controller
 public class DepartmentController {
-   @Autowired
+    @Autowired
     private DepartmentService departmentService;
+
     @RequestMapping("/depts")
     @ResponseBody
-    public Msg getDepts(){
+    public Msg getDepts() {
         List<Department> deptsList = departmentService.getDepts();
 
         return Msg.success().add("depts", deptsList);

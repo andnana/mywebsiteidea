@@ -15,11 +15,18 @@
     <mvc:annotation-driven/>
      <mvc:resources location="/resources/" mapping="/resources/**"/>
      <mvc:resources location="/back/" mapping="/back/**"/>
+    <mvc:resources location="/" mapping="/**"/>
     <mvc:default-servlet-handler />
     <bean id="viewResolver"
         class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
         <property name="prefix" value="/back/" />
         <property name="suffix" value=".jsp" />  
     </bean>
+    <!--2 注册上传  StandardServletMultipartResolver
+     第二个不需要第三方 jar 包支持，它使用 servlet 内置的上传功能，
+     但是只能在 Servlet 3 以上的版本使用。
+     -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
 
+    </bean>
 </beans> 

@@ -1,12 +1,13 @@
 package top.andnana.dao;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import top.andnana.entity.User;
 import top.andnana.entity.UserExample;
 
 public interface UserMapper {
-  /*  long countByExample(UserExample example);
+    long countByExample(UserExample example);
 
     int deleteByExample(UserExample example);
 
@@ -26,19 +27,13 @@ public interface UserMapper {
 
     int updateByPrimaryKeySelective(User record);
 
-    int updateByPrimaryKey(User record);*/
-
-    public void insertUser(User user);
+    int updateByPrimaryKey(User record);
 
     public List<User> selectAll();
 
-    public User selectUserByUsername(@Param("username") String username);
+    public User selectUserByUsername(String username);
 
-    public User selectUserById(@Param("id") Integer id);
+    public void insertUser(User user);
 
-    public void updateByPrimaryKeySelective(User user);
-
-    public void deleteByPrimaryKey(Integer id);
-
-    public int deleteByExample(UserExample example);
+    public User selectUserById(Integer id);
 }

@@ -1,0 +1,306 @@
+<html>
+<head>
+
+    <title>新福茶叶网</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="新福茶叶、铁观音、金骏眉、白茶、普洱、龙井"/>
+    <meta name="description" content="本店经营：铁观音、金骏眉、白茶、普洱、龙井、等等。。。本店所茶叶：半斤/250g起售，满200元包邮。所卖的观音茶叶都是自己家里生产。让广大铁观音爱好者品尝到原汁原味的正宗安溪铁观音茶叶，欢迎广大铁观音爱好者来我家里做客。如果有什么不懂的问题，欢迎加QQ微信：1150796554进行咨询，或拨打24小时咨询热线电话18065381118（微信），自家茶叶负责人会对您的问题做出更专业详细的解答。泉州市安溪县感德镇。
+"/>
+    <script src="resources/js/jquery.js"></script>
+    <script src="resources/js/vue.js" type="text/javascript"></script>
+    <script src="resources/js/vue-resource.js" type="text/javascript"></script>
+    <script src="resources/js/vue-router.js" type="text/javascript"></script>
+    <link href="resources/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" midia="screen"/>
+    <script type="text/javascript" src="resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link href="resources/css/02.css" rel="stylesheet" type="text/css" midia="screen"/>
+    <script type="text/javascript" src="resources/js/home.js"></script>
+</head>
+
+<body>
+<div id="app" class="panel-default">
+
+    <div id="container" class="panel-body">
+
+      <!--  <nav class="navbar navbar-default">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <div class="navbar-form">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li @click="bindToSearch($event)" v-for="category of categoryList"
+                                v-bind:index="category.id"><a href="javascript:void(0)">{{category.categoryName}}</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    &lt;!&ndash; /btn-group &ndash;&gt;
+                    <input type="text" class="form-control" aria-label="...">
+								<span class="input-group-btn">
+									<button class="btn btn-primary" type="button">搜索</button>
+								</span>
+                </div>
+                &lt;!&ndash; /input-group &ndash;&gt;
+            </div>
+
+
+        </nav>-->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">安得信息</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+
+
+                            <!--<li class="bgcolor-black"><a href="" class="color-white">java相关</a></li>-->
+                            <!--<li class="bgcolor-black"><a href="" class="color-white">linux相关</a></li>-->
+                            <!--<li class="bgcolor-black"><a href="" class="color-white">idea相关</a></li>-->
+                            <!--<li class="bgcolor-white"><a href="" class="color-black">mysql相关</a></li>-->
+                            <!--<li v-for="category of categoryList" @click="activeColor(category.id)" v-bind:class="{'bgcolor-white':category.id == categoryid, 'bgcolor-black':category.id != categoryid}" ><a href="javascript:void(0)"  v-bind:class="{'color-black':category.id == categoryid, 'color-white':category.id != categoryid}" >{{category.categoryName}}</a></li>-->
+                            <li v-for="category of categoryList" @click="activeColor(category.id)">
+                                <a href="javascript:void(0)">{{category.categoryName}}<span class="badge">4</span></a>
+
+                            </li>
+
+
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                  <!--      <span class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span>请选择分类</span> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                &lt;!&ndash;<li @click="bindToSearch($event)" index="0" ><a href="javascript:void(0)">全部分类</a></li>&ndash;&gt;
+                                <li @click="bindToSearch($event)" v-for="category of categoryList"
+                                    v-bind:index="category.id"><a href="javascript:void(0)">{{category.categoryName}}</a>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </span>-->
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <!--<div id="banner">
+            &lt;!&ndash;<span>仙人掌网站制作</span>&ndash;&gt;
+            <img src='images/1916.jpg'/>
+            </div>-->
+        <!--<div class="nav">-->
+        <!--<ul>-->
+        <!--<li><a href="home.html">首页</a></li>-->
+        <!--<li><a href="http://www.3v.cm/gbook/index.asp?username=dlrenjie">留言</a></li>-->
+        <!--<li><a href="home.html">登录</a></li>-->
+        <!--<li><a href="">注册</a></li>-->
+        <!--</ul>-->
+        <!--</div>-->
+
+
+        <div id="content">
+          <!--  <div id="category">
+
+                &lt;!&ndash;<div id="searchbar"><input type="text" name="searchword" id="searchword" size="12"/> <button type="button">搜索</button></div>&ndash;&gt;
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">分类</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="nav nav-pills nav-stacked">
+
+                            &lt;!&ndash;<li class="bgcolor-black"><a href="" class="color-white">java相关</a></li>&ndash;&gt;
+                            &lt;!&ndash;<li class="bgcolor-black"><a href="" class="color-white">linux相关</a></li>&ndash;&gt;
+                            &lt;!&ndash;<li class="bgcolor-black"><a href="" class="color-white">idea相关</a></li>&ndash;&gt;
+                            &lt;!&ndash;<li class="bgcolor-white"><a href="" class="color-black">mysql相关</a></li>&ndash;&gt;
+                            &lt;!&ndash;<li v-for="category of categoryList" @click="activeColor(category.id)" v-bind:class="{'bgcolor-white':category.id == categoryid, 'bgcolor-black':category.id != categoryid}" ><a href="javascript:void(0)"  v-bind:class="{'color-black':category.id == categoryid, 'color-white':category.id != categoryid}" >{{category.categoryName}}</a></li>&ndash;&gt;
+                            <li v-for="category of categoryList" @click="activeColor(category.id)">
+                                <a href="javascript:void(0)">{{category.categoryName}}<span class="badge">4</span></a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">标签</div>
+                    <div class="panel-body">
+                        <ul>
+                            <li style="border:none" v-for="label of labels" class="list-group-item"><span class="label label-default">{{label.labelName}}</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+
+
+            <!--<div id="info">-->
+            <!--<router-view></router-view>-->
+            <!--</div>-->
+
+            <!--<template id="info_template">-->
+            <div id="main">
+                <!--<div class="text">
+                        <p>
+                本店经营：铁观音、金骏眉、白茶、普洱、龙井、等等。。。本店所茶叶：半斤/250g起售，满200元包邮。所
+                卖的观音茶叶都是自己家里生产。让广大铁观音爱好者品尝到原汁原味的正宗安溪铁观音茶叶，欢迎广大铁观
+                音爱好者来我家里做客。如果有什么不懂的问题，欢迎加QQ微信：1150796554进行咨询，或拨打24小时咨询热
+                线电话18065381118（微信），自家茶叶负责人会对您的问题做出更专业详细的解答。泉州市安溪县感德镇。</p>
+                </div>-->
+
+
+                <!--<ul style="float:left;background-color:#ffffff;display:inline;position:relative;padding-top:15px;">-->
+                <!--<li style="display:inline;float:left;width:200px;height:200px;"><img src="images/Screenshot_2015-01-08-14-49-51.png" height="100px"  />-->
+                <!--<br />-->
+                <!--<p class=index-img-info>做好茶真吧不易<a href="imgdetail1.html">&nbsp;&nbsp详细</a><br /></p></li>-->
+
+                <!--<li style="display:inline;float:left;width:200px;height:200px;">-->
+                <!--<img src="images/Screenshot_2015-01-08-14-50-28.png" height="100px"  />-->
+                <!--<br />-->
+                <!--<p class=index-img-info>传统手工做茶<a href="imgdetail2.html">&nbsp;&nbsp详细</a><br /></p></li>-->
+
+                <!--<li style="display:inline;float:left;width:200px;height:200px;">-->
+                <!--<img src="images/Screenshot_2015-01-08-14-50-36.png" height="100px"  />-->
+                <!--<br />-->
+                <!--<p class=index-img-info>传统手工做茶<a href="imgdetail3.html">&nbsp;&nbsp详细</a><br /></p></li>-->
+
+                <!--<li style="display:inline;float:left;width:200px;height:200px;"><img src="images/Screenshot_2015-01-08-14-50-43.png" height="100px"  />-->
+                <!--<br />-->
+                <!--<p class=index-img-info>看看您还喝不喝茶<a href="imgdetail4.html">&nbsp;&nbsp详细</a><br /></p>-->
+                <!--</li>-->
+
+                <!--<li style="display:inline;float:left;width:200px;height:200px;"><img src="images/Screenshot_2015-01-08-19-38-28.png" height="100px"  />-->
+                <!--<br />-->
+                <!--<p class=index-img-info>此茶浓香耐泡型<a href="imgdetail5.html">&nbsp;&nbsp详细</a><br /></p></li></ul>-->
+
+                <div class="row" v-for="infoList of infoList2Dimension">
+                    <div class="col-lg-2" v-for="info of infoList" @click="getInfoDetail(info.id)">
+                        <a href="javascript:void(0)" class="thumbnail">
+                            <img :src="basePath + '/resources/images/' + info.picName" alt=""/>
+                        </a>
+
+                        <div class="caption">
+                            <h5>{{info.title}}</h5>
+
+                            <p>{{info.category.categoryName}}</p>
+
+                            <p>
+                                <button class="btn btn-xs btn-primary">fdfa</button>
+                                <button class="btn btn-xs btn-success">fdfa</button>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div id="info-detail">
+                    <a href="javascript:void(0)" @click="getInfoList(pageNum, categoryid)" class="glyphicon glyphicon-chevron-left" aria-hidden="true"></a>
+                    <div class="row">
+                        <div class="col-xs-6">{{info.title}}</div>
+                        <div calss="col-xs-4">{{info.infoDate}}</div>
+
+                    </div>
+
+                    <div v-html="info.content"></div>
+                    <span>标签：</span>
+                    <ul style="display: inline-block">
+                        <li style="text-decoration: none; display: inline-block; margin: 5px" v-for="label of info.labelList"><span class="label label-default">{{label.labelName}}</span></li>
+                    </ul>
+                </div>
+                <ul v-if="infoList2Dimension.length > 0" class="pager">
+                    <!--<li><a @click="getInfoList(1, categoryid)">首页</a></li>-->
+
+                    <li><a @click="getInfoList(pageNum-1, categoryid)">上一页</a></li>
+
+                    <!--<span class="current">1</span>-->
+                    <!--<li :class="{'active':page==pageNum}" v-for="page of navigatepageNums"
+                        @click="getInfoList(page,  categoryid)"><span> {{page}}</span></li>-->
+
+
+                    <li><a @click="getInfoList(pageNum+1,  categoryid)">下一页</a></li>
+                    <!--<li><a @click="getInfoList(total,  categoryid)">尾页</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">课程链接</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4"><a href="http://study.163.com/course/courseMain.htm?courseId=1004179049"
+                                             taget="_blank">叶建华vue.js课程</a></div>
+                    <div class="col-xs-4"><a href="https://chuanke.baidu.com/v1982732-218752-1415292.html"
+                                             taget="_blank">mybatis视频课程1</a></div>
+                    <div class="col-xs-4"><a
+                            href="https://ke.qq.com/user/index/index.html#sid=plan&cid=199779&term_id=100236742"
+                            taget="_blank">mybatis视频课程2</a></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4"><a href="http://www.gulixueyuan.com/" taget="_blank">谷粒学院</a></div>
+                    <div class="col-xs-4"><a href="http://www.imooc.com" taget="_blank">慕课网</a></div>
+                    <div class="col-xs-4"><a href="http://www.icoolxue.com" taget="_blank">酷学网</a></div>
+
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">标签</h3>
+            </div>
+            <div class="panel-body">
+                <div v-for="labels of labels2Dimension" class="row" style="padding-top: 20px">
+                    <div  class="col-xs-6" v-for="label of labels"><span  class="label label-default">{{label.labelName}}</span></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-footer">1079597830@qq.com</div>
+</div>
+</body>
+
+</html>

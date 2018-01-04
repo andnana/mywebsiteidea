@@ -1,6 +1,7 @@
 package top.andnana.dao;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import top.andnana.entity.Department;
 import top.andnana.entity.DepartmentExample;
@@ -17,9 +18,10 @@ public interface DepartmentMapper {
     int insertSelective(Department record);
 
     List<Department> selectByExample(DepartmentExample example);
-    List<Department> selectAll();
 
     Department selectByPrimaryKey(Integer id);
+
+    List<Department> selectAll();
 
     int updateByExampleSelective(@Param("record") Department record, @Param("example") DepartmentExample example);
 

@@ -22,50 +22,55 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
-    @RequestMapping(value="/user/{id}", method = RequestMethod.PUT)
+
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
     @ResponseBody
-    public Msg updateUser(@Valid User user){
+    public Msg updateUser(@Valid User user) {
 
         userService.updateByPrimaryKeySelective(user);
 
         return Msg.success();
     }
-    @RequestMapping(value="/user", method = RequestMethod.POST)
+
+    @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ResponseBody
-    public Msg saveUser(@Valid User user, BindingResult result){
-        if(result.hasErrors()){
+    public Msg saveUser(@Valid User user, BindingResult result) {
+        if (result.hasErrors()) {
             List<FieldError> errors = result.getFieldErrors();
             Map<String, Object> errorsHashMap = new HashMap<>();
 
-            for(FieldError fieldError : errors){
+            for (FieldError fieldError : errors) {
                 errorsHashMap.put(fieldError.getField(), fieldError.getDefaultMessage());
             }
             return Msg.failure().add("errors", errorsHashMap);
-        }else {
+        } else {
             userService.saveUser(user);
             return Msg.success();
         }
 
     }
+
     @RequestMapping("/checkUsername")
     @ResponseBody
-    public Msg checkUsername(@RequestParam("username")String username){
+    public Msg checkUsername(@RequestParam("username") String username) {
         String usernameReg = "(^[a-zA-Z0-9_-]{3,16})|(^[\\u2E80-\\u9FFF]{2,5}$)";
         boolean available = username.matches(usernameReg);
-        if(!available){
+        if (!available) {
             return Msg.failure().add("otherMsg", "用户名在3-16位英文字符，或2-5位中文。（a-zA-Z0-9_-)");
         }
 
         boolean hasUserBoolean = userService.checkUsername(username);
         return hasUserBoolean ? Msg.failure().add("otherMsg", "用户名重复") : Msg.success().add("otherMsg", "用户名可用");
     }
+
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public Msg getUser(@PathVariable("id")Integer id){
+    public Msg getUser(@PathVariable("id") Integer id) {
         User user = userService.getUser(id);
-        return  Msg.success().add("user", user);
+        return Msg.success().add("user", user);
     }
-//    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+
+    //    @RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
 //    @ResponseBody
 //    public Msg deleteUserById(@PathVariable("id")Integer id){
 //        userService.deleteByPrimaryKey(id);
@@ -73,15 +78,15 @@ public class UserController {
 //    }
     @RequestMapping(value = "/user/{ids}", method = RequestMethod.DELETE)
     @ResponseBody
-    public Msg deleteUserById(@PathVariable("ids")String ids){
-        if(ids.contains("-")){
+    public Msg deleteUserById(@PathVariable("ids") String ids) {
+        if (ids.contains("-")) {
             String[] ids_String = ids.split("-");
             List<Integer> ids_Integer = new ArrayList<>();
             for (int i = 0; i < ids_String.length; i++) {
                 ids_Integer.add(Integer.parseInt(ids_String[i]));
             }
             userService.deleteByExample(ids_Integer);
-        }else {
+        } else {
             Integer id = Integer.parseInt(ids);
             userService.deleteByPrimaryKey(id);
         }
