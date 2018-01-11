@@ -164,7 +164,7 @@ $(document).ready(function () {
 
                             temp.push(labels1Dimension[i]);
 
-                            if (temp.length == 2 || i == labels1Dimension.length - 1) {
+                            if (temp.length == 3 || i == labels1Dimension.length - 1) {
 
                                 labels2Dimension.push(temp);
 
